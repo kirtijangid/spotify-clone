@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -6,8 +8,14 @@ void main() {
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp
     ]);
-  runApp(const MaterialApp(
-    home: MyApp(),
+  runApp( MaterialApp(
+    initialRoute: '/',
+    routes: {
+      '/home' : (context) => HomePage(),
+      '/search' : (context) => Search(),
+      '/library' : (context) => LibraryScreen(),
+      '/premium' : (context) => Premium(),
+    },
   ));
 }
 
