@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:spotify_clone/home/homepage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -9,10 +10,10 @@ void main() {
     DeviceOrientation.portraitUp
     ]);
   runApp( MaterialApp(
-    home: MyApp(),
+    
      initialRoute: '/',
      routes: {
-         '/home' : (context) => HomePage(),
+         '/' : (context) => HomePage(),
     //   '/search' : (context) => Search(),
     //   '/library' : (context) => LibraryScreen(),
     //   '/premium' : (context) => Premium(),
