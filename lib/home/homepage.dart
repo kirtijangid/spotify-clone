@@ -8,15 +8,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color.fromARGB(255, 29, 28, 28),
              Color.fromARGB(255, 77, 76, 76)],
           ),
         ),
         child: ListView(
-          children: [
-            const SizedBox(height: 10),
+          children: const [
+            SizedBox(height: 10),
           Row(
             children: [
               Text('Good Evening',
