@@ -21,21 +21,20 @@ class PlayLists extends StatelessWidget {
                   children: [
                     Container(
                       width: 60,
-                      decoration:  BoxDecoration(
+                      decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage(
-                            val['image'].toString()
-                          ),
+                          image: AssetImage(val['image'].toString()),
                         ),
                       ),
                     ),
                     const SizedBox(width: 10),
-                    Flexible(child: Text(
-                      val['name'].toString(),
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold
-                    ),))
+                    Flexible(
+                      child: Text(
+                        val['name'].toString(),
+                        style: const TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                    ),
                   ],
                 ),
               ),
