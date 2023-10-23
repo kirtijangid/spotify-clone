@@ -9,7 +9,7 @@ class PlayLists extends StatelessWidget {
     return GridView(
         physics: const ScrollPhysics(),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, childAspectRatio: 3),
+            crossAxisCount: 2, childAspectRatio: 2.5),
         children: Data().playList.map((val) {
           return InkWell(
             child: Card(
