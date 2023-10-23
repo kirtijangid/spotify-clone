@@ -28,6 +28,12 @@ class PlayLists extends StatelessWidget {
                         ),
                       ),
                     ),
+                    SizedBox(width: 10),
+                    Flexible(child: Text('Liked Songs',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                    ),))
                   ],
                 ),
               ),
