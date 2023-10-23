@@ -13,7 +13,7 @@ class PlayLists extends StatelessWidget {
         children: Data().playList.map((val) {
           return InkWell(
             child: Card(
-              color: const Color.fromARGB(255, 99, 98, 97),
+              color: Color.fromARGB(255, 85, 84, 84),
               child: IntrinsicHeight(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
