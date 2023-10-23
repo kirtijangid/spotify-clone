@@ -13,7 +13,7 @@ void main() {
     
      initialRoute: '/',
      routes: {
-         '/' : (context) => HomePage(),
+         '/' : (context) => const HomePage(),
     //   '/search' : (context) => Search(),
     //   '/library' : (context) => LibraryScreen(),
     //   '/premium' : (context) => Premium(),
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('ok'),
+      child: const Text('ok'),
     );
   }
 }
