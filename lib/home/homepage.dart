@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/home/widgets/headerAction.dart';
 import 'package:spotify_clone/home/widgets/playlist.dart';
+import 'package:spotify_clone/home/widgets/recentlyPlaylist.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,26 +24,26 @@ class HomePage extends StatelessWidget {
             const Row(
               children: [
                 Text(
-                  'Good Evening.',
+                  'Good evening',
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 20,
+                      fontSize: 23,
                       fontWeight: FontWeight.bold),
                 ),
                 HeaderActions()
               ],
             ),
             const SizedBox(
-              height: 10,
+              height: 15,
             ),
             Container(
-              height: 200,
+              height: 150,
              child: PlayLists(),
             ),
             const SizedBox(
               height: 20,
             ),
-            //RecentlyPlayed(),
+            RecentlyPlayed(),
             //JumpIn(),
           ],
         ),

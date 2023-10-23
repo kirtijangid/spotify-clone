@@ -9,7 +9,7 @@ class HeaderActions extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        SizedBox(width: 180,),
+        SizedBox(width: 150,),
         Icon(Icons.history,
         color: Colors.white,
         size: 22,
