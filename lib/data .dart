@@ -1,8 +1,8 @@
 class Data {
   var playList = [
     {
-      'name' : '...',
-      'image' : '...',
+      'name' : 'Liked Songs',
+      'image' : 'assets/images/liked.jpg',
       'audio' : ' '
     },
     {

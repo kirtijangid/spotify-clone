@@ -13,7 +13,7 @@ class PlayLists extends StatelessWidget {
         children: Data().playList.map((val) {
           return InkWell(
             child: Card(
-              color: Color.fromARGB(255, 85, 84, 84),
+              color: const Color.fromARGB(255, 85, 84, 84),
               child: IntrinsicHeight(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -21,16 +21,18 @@ class PlayLists extends StatelessWidget {
                   children: [
                     Container(
                       width: 60,
-                      decoration: const BoxDecoration(
+                      decoration:  BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('assets/images/liked.jpg',
+                          image: AssetImage(
+                            val['image'].toString()
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(width: 10),
-                    Flexible(child: Text('Liked Songs',
-                    style: TextStyle(
+                    const SizedBox(width: 10),
+                    Flexible(child: Text(
+                      val['name'].toString(),
+                    style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold
                     ),))
