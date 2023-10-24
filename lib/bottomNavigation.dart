@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BottomNavigation extends StatelessWidget {
   //const BottomNavigation({super.key});
@@ -55,7 +56,7 @@ class BottomNavigation extends StatelessWidget {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.workspace_premium,
+                FontAwesomeIcons.spotify,
                 size: 30,
               ),
               label: 'Premium',
