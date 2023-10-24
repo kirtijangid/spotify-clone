@@ -49,7 +49,20 @@ class JumpIn extends StatelessWidget {
                         ),
                       ),
                     ),
-                   
+                    const SizedBox(height: 10,),
+                    Align(alignment: Alignment.center,
+                    child: Text(
+                      Data().jumpIn[index]['name'].toString(),
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      softWrap: true,
+                      overflow: TextOverflow.fade,
+                    ),
+                ),
                 ],
                 ),
               );
