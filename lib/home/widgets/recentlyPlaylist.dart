@@ -46,7 +46,8 @@ class RecentlyPlayed extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10,),
-                    Text(
+                    Align(alignment: Alignment.center,
+                    child: Text(
                       Data().recentlyPlayed[index]['name'].toString(),
                       textAlign: TextAlign.center,
                       style: TextStyle(
@@ -57,7 +58,8 @@ class RecentlyPlayed extends StatelessWidget {
                       softWrap: true,
                       overflow: TextOverflow.fade,
                     ),
-                  ],
+                ),
+                ],
                 ),
               );
             }),
