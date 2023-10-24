@@ -13,7 +13,8 @@ class JumpIn extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding: EdgeInsets.only(top: 10),
+          padding: const EdgeInsets.only(top: 10,
+          left: 10),
           child: const Text(
             'Jump back in',
             style: TextStyle(

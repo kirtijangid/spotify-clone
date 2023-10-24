@@ -9,6 +9,7 @@ class RecentlyPlayed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Container(
+        padding: EdgeInsets.only(left: 10),
         child: const Text(
           'Recently Played',
           style: TextStyle(
