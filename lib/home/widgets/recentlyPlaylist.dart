@@ -50,7 +50,7 @@ class RecentlyPlayed extends StatelessWidget {
                     child: Text(
                       Data().recentlyPlayed[index]['name'].toString(),
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 15,
                         fontWeight: FontWeight.bold,

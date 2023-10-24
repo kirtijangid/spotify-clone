@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/home/widgets/headerAction.dart';
+import 'package:spotify_clone/home/widgets/jumpIn.dart';
 import 'package:spotify_clone/home/widgets/playlist.dart';
 import 'package:spotify_clone/home/widgets/recentlyPlaylist.dart';
 
@@ -44,7 +45,7 @@ class HomePage extends StatelessWidget {
               height: 20,
             ),
             RecentlyPlayed(),
-            //JumpIn(),
+            JumpIn(),
           ],
         ),
       ),
