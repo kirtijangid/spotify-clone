@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/bottomNavigation.dart';
 import 'package:spotify_clone/search/widgets/searchWidget.dart';
+import 'package:spotify_clone/search/widgets/topgenre.dart';
 
 class Search extends StatelessWidget {
   const Search({super.key});
@@ -23,7 +24,7 @@ class Search extends StatelessWidget {
               ),
             ),
             SearchWidget(),
-            //TopGenre(),
+            TopGenre(),
           ],
         ),
       ),
