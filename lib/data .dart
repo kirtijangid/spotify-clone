@@ -108,4 +108,23 @@ class Data {
           'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
     },
   ];
+   var genres = [
+    'assets/images/pop.jpg',
+    'assets/images/hiphop.jpg',
+    'assets/images/rnb.jpg',
+    'assets/images/rock.jpg',
+  ];
+
+  var browseall = [
+    'assets/images/podcasts.jpg',
+    'assets/images/newrelease.jpg',
+    'assets/images/charts.jpg',
+    'assets/images/concerts.jpg',
+    'assets/images/madeforyou.jpg',
+    'assets/images/athome.jpg',
+    'assets/images/onlyyou.jpg',
+    'assets/images/covid19guide.jpg',
+    'assets/images/bollywood.jpg',
+    'assets/images/equal.jpg',
+  ];
 }
