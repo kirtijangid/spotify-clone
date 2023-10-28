@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/bottomNavigation.dart';
 
 class Search extends StatelessWidget {
   const Search({super.key});
@@ -6,21 +7,26 @@ class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 26, 25, 25),
+      backgroundColor: Color.fromARGB(255, 24, 23, 23),
       body: Container(
+        padding: EdgeInsets.only(top: 5, bottom: 10, left: 10, right: 10),
         child: ListView(
-          children: [
-            Text('Search',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Librefranklin',
+          children: const [
+            Text(
+              'Search',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Librefranklin',
+              ),
             ),
-            ),
-            
-          ]),
+            //SearchWidget(),
+            //TopGenre(),
+          ],
+        ),
       ),
+      bottomNavigationBar: BottomBar(1),
     );
   }
 }

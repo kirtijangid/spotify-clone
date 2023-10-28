@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:spotify_clone/home/homepage.dart';
 
-class BottomNavigation extends StatelessWidget {
-  //const BottomNavigation({super.key});
-
+class BottomBar extends StatelessWidget {
   int _currentIndex;
-  BottomNavigation(this._currentIndex);
+  BottomBar(this._currentIndex, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +14,18 @@ class BottomNavigation extends StatelessWidget {
       ),
       child: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              colors: [Colors.transparent, Colors.transparent],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter),
+          gradient: LinearGradient(colors: [
+            Colors.transparent,
+            Colors.transparent,
+          ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           onTap: (val) {
             if (val == 0) {
-              Navigator.of(context).popAndPushNamed('/');
+              Navigator.popAndPushNamed(context, '/');
+            } else if (val == 1) {
+              Navigator.popAndPushNamed(context, '/search');
             }
           },
           selectedItemColor: Colors.amber,

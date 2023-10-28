@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigation(0),
+      bottomNavigationBar: BottomBar(0),
     );
   }
 }
