@@ -27,6 +27,9 @@ class SearchWidget extends StatelessWidget {
             fontSize: 17,
 
           ),
+          softWrap: true,
+          maxLines: 1,
+          overflow: TextOverflow.fade,
           ),
         ],
       ),
