@@ -8,13 +8,16 @@ class SearchWidget extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 50,
-      decoration: BoxDecoration(color: Colors.white),
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(15),
+          ),
       child: const Row(
         children: [
           SizedBox(height: 10),
-          Icon(Icons.search_sharp,
-          size: 30,
-          color: Colors.black,
+          Icon(
+            Icons.search_sharp,
+            size: 30,
+            color: Colors.black,
           ),
         ],
       ),
