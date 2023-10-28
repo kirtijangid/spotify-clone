@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/search/widgets/tiles.dart';
 
 class TopGenre extends StatelessWidget {
   const TopGenre({super.key});
@@ -16,6 +17,7 @@ class TopGenre extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
         ),
+        Tiles(),
       ],
     );
   }
