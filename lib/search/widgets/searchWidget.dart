@@ -6,10 +6,11 @@ class SearchWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 10,left: 5, right: 5),
       width: double.infinity,
       height: 50,
       decoration: BoxDecoration(
-          color: Colors.white, borderRadius: BorderRadius.circular(15),
+          color: Colors.white, borderRadius: BorderRadius.circular(10),
           ),
       child: const Row(
         children: [
