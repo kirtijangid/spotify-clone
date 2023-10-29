@@ -42,7 +42,10 @@ class Library extends StatelessWidget {
                   ),
                   ),
                 ],
-              )
+              ),
+              SizedBox(width: 190,),
+              Icon(Icons.add_box_outlined,
+              color: Colors.white,),
             ],
           )
         ],
