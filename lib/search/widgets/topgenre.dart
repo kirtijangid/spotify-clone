@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/data%20.dart';
 import 'package:spotify_clone/search/widgets/tiles.dart';
 
 class TopGenre extends StatelessWidget {
@@ -6,7 +7,7 @@ class TopGenre extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Explore your top genres',
@@ -17,7 +18,7 @@ class TopGenre extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
         ),
-        Tiles(),
+        Tiles(something: Data().genres),
       ],
     );
   }
