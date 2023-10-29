@@ -9,7 +9,7 @@ class RoundedCards extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(20),
       border: Border.all(),
-      color: Colors.white),
+      color: Color.fromARGB(255, 61, 61, 61)),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 8,
@@ -19,7 +19,7 @@ class RoundedCards extends StatelessWidget {
           text,
           style: const TextStyle(
             color: Colors.white,
-            fontSize: 20,
+            fontSize: 15,
           ),
         ),
       ),
