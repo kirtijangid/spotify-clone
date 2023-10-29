@@ -22,6 +22,15 @@ class TopGenre extends StatelessWidget {
         SizedBox(height: 10,),
         Tiles(something: Data().genres),
         SizedBox(height: 10,),
+        Text('Browse All',
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+          fontFamily: 'LibreFranklin',
+          fontWeight: FontWeight.bold,
+        ),
+        ),
+        
       ],
     );
   }
