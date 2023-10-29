@@ -10,6 +10,7 @@ class TopGenre extends StatelessWidget {
     return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SizedBox(height: 10,),
         Text('Explore your top genres',
         style: TextStyle(
           color: Colors.white,
@@ -18,7 +19,9 @@ class TopGenre extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
         ),
+        SizedBox(height: 10,),
         Tiles(something: Data().genres),
+        SizedBox(height: 10,),
       ],
     );
   }
