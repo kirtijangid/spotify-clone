@@ -8,8 +8,9 @@ class Search extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromARGB(255, 34, 34, 34),
+    return SafeArea(
+      child: Scaffold(
+      backgroundColor: const Color.fromARGB(255, 34, 34, 34),
       body: Container(
         padding: EdgeInsets.only(top: 5, bottom: 10, left: 10, right: 10),
         child: ListView(
@@ -29,6 +30,7 @@ class Search extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomBar(1),
+    ),
     );
   }
 }
