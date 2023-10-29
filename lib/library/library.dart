@@ -16,8 +16,11 @@ class Library extends StatelessWidget {
           Header(),
           Row(
             children:[
+          SizedBox(width: 10,),
           RoundedCards(text: 'Playlists'),
+          SizedBox(width: 10,),
           RoundedCards(text: 'Podcasts & shows'),
+          SizedBox(width: 10,),
           RoundedCards(text: 'Artists'),
             ],
           ),
