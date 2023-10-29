@@ -6,7 +6,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 30, left: 10, right: 10),
+      margin: const EdgeInsets.only(top: 30, left: 10, right: 10, bottom: 15),
       child: const Row(
         children: [
           CircleAvatar(
