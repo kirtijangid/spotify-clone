@@ -14,10 +14,15 @@ class Tiles extends StatelessWidget {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 16 / 9,
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
         ),
         children: something.map((imageUrl) {
           return Container(
-            child: Image.asset(imageUrl, fit: BoxFit.cover,),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(5),
+              child: Image.asset(imageUrl, fit: BoxFit.cover,),
+          ),
           );
         }).toList(),
       ),
