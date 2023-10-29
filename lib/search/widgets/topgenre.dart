@@ -30,7 +30,8 @@ class TopGenre extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
         ),
-        
+        SizedBox(height: 10,),
+        Tiles(something: Data().browseall),
       ],
     );
   }
