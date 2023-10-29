@@ -24,6 +24,27 @@ class Library extends StatelessWidget {
           RoundedCards(text: 'Artists'),
             ],
           ),
+          Row(
+            children: [
+              Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Icon(Icons.compare_arrows_rounded,
+                  color: Colors.white,
+                  size: 25,
+                  ),
+                  SizedBox(width: 10,),
+                  Text('Recently Played',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                ],
+              )
+            ],
+          )
         ],
       ),
       bottomNavigationBar: BottomBar(2),
