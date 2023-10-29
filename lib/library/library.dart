@@ -9,6 +9,7 @@ class Library extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black54,
       body: ListView(
         children: const [
           Header(),
