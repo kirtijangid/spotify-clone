@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:spotify_clone/bottomNavigation.dart';
+import 'package:spotify_clone/data%20.dart';
 import 'package:spotify_clone/library/widgets/header.dart';
 import 'package:spotify_clone/library/widgets/roundedCards.dart';
 
@@ -12,9 +14,9 @@ class Library extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black54,
       body: ListView(
-        children: const [
+        children:  [
           Header(),
-          Row(
+          const Row(
             children:[
           SizedBox(width: 10,),
           RoundedCards(text: 'Playlists'),
@@ -25,7 +27,7 @@ class Library extends StatelessWidget {
             ],
           ),
           SizedBox(height: 25,),
-          Padding(
+          const Padding(
             padding: EdgeInsets.all(5),
           child: Row(
             children: [
@@ -52,6 +54,17 @@ class Library extends StatelessWidget {
               size: 18,),
             ],
           ),
+          ),
+          ...Data().library.map((val){
+            return  GFListTile(
+              avatar: GFAvatar(
+                backgroundImage: AssetImage(
+                  val['image'].toString()
+                ),
+               
+              ),
+            );
+          },
           ),
         ],
       ),

@@ -127,4 +127,31 @@ class Data {
     'assets/images/bollywood.jpg',
     'assets/images/equal.jpg',
   ];
+
+   var library = [
+    {
+      'name': 'Liked Songs',
+      'subtitle': 'Playlist • 34 songs',
+      'image': 'assets/images/likedsongs.png',
+      'shape': GFAvatarShape.square,
+    },
+    {
+      'name': 'Gentle Guitar',
+      'subtitle': 'Playlist • Epidemic Sound',
+      'image': 'assets/images/gentleguitar.png',
+      'shape': GFAvatarShape.square,
+    },
+    {
+      'name': 'John Mayer',
+      'subtitle': 'Artist',
+      'image': 'assets/images/johnmayerr.png',
+      'shape': GFAvatarShape.circle,
+    },
+    {
+      'name': 'Coldplay',
+      'subtitle': 'Artist',
+      'image': 'assets/images/coldplay.png',
+      'shape': GFAvatarShape.circle,
+    },
+  ];
 }
