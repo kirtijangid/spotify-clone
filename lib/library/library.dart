@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/bottomNavigation.dart';
 import 'package:spotify_clone/library/widgets/header.dart';
 
 
-class LibraryScreen extends StatelessWidget {
-  const LibraryScreen({super.key});
+class Library extends StatelessWidget {
+  const Library({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: [
+        children: const [
           Header(),
         ],
       ),
+      bottomNavigationBar: BottomBar(2),
     );
   }
 }

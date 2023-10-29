@@ -9,7 +9,9 @@ class Header extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
+            //radius: 15,
             backgroundColor: Colors.deepOrange,
+            child: Text('Your Library'),
           )
         ],
       ),

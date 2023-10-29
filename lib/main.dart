@@ -14,7 +14,7 @@ void main() {
     routes: {
       '/': (context) => const HomePage(),
       '/search': (context) => const Search(),
-      '/library' : (context) => LibraryScreen(),
+      '/library' : (context) => const Library(),
       //   '/premium' : (context) => Premium(),
     },
   ));
