@@ -11,7 +11,11 @@ class Header extends StatelessWidget {
           CircleAvatar(
             //radius: 15,
             backgroundColor: Colors.deepOrange,
-            child: Text('Your Library'),
+            child: Text('K',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold
+            ),),
           )
         ],
       ),
