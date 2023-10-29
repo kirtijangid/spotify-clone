@@ -6,7 +6,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 30, left: 10),
+      margin: EdgeInsets.only(top: 30, left: 10, right: 10),
       child: const Row(
         children: [
           CircleAvatar(
@@ -25,7 +25,22 @@ class Header extends StatelessWidget {
             fontSize: 23,
             fontWeight: FontWeight.bold,
             color: Colors.white
-          ),)
+          ),
+          ),
+          Row(
+            children: [
+              SizedBox(width: 120,),
+              Icon(Icons.search,
+              color: Colors.white,
+              size: 28,
+              ),
+              SizedBox(width: 20,),
+              Icon(Icons.add,
+              color: Colors.white,
+              size: 28,)
+              
+            ],
+          )
         ],
       ),
     );
