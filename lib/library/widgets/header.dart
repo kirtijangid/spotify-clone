@@ -6,17 +6,25 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Row(
+      child: const Row(
         children: [
           CircleAvatar(
-            //radius: 15,
-            backgroundColor: Colors.deepOrange,
+            radius: 18,
+            backgroundColor: Color.fromARGB(255, 42, 56, 252),
             child: Text('K',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold
-            ),),
-          )
+            ),
+            ),
+          ),
+          SizedBox(width: 10),
+          Text('Your Library',
+          style: TextStyle(
+            fontSize: 23,
+            fontWeight: FontWeight.bold,
+            color: Colors.white
+          ),)
         ],
       ),
     );
