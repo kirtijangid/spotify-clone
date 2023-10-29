@@ -5,6 +5,14 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Row(
+        children: [
+          CircleAvatar(
+            backgroundColor: Colors.deepOrange,
+          )
+        ],
+      ),
+    );
   }
 }
