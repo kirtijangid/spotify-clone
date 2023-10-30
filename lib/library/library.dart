@@ -61,7 +61,8 @@ class Library extends StatelessWidget {
                 backgroundImage: AssetImage(
                   val['image'].toString()
                 ),
-               
+                radius: 30,
+                shape: val['shape'] as dynamic,
               ),
             );
           },
