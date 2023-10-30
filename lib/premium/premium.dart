@@ -6,12 +6,21 @@ class Premium extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color.fromARGB(137, 24, 24, 24),
         body: ListView(
           children: const [
-            Text('hlo')
+            Text('Premium',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+            )
         ]),
       bottomNavigationBar: BottomBar(3),
-    );
+     ),
+      );
   }
 }
