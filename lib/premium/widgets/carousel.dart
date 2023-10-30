@@ -15,7 +15,7 @@ class Cards extends StatelessWidget {
             width: MediaQuery.of(context).size.width / (5.7),
           ),
           ...Data().carousel.map(
-            (e) {
+            (val) {
               return Container(
                 child: Row(
                   children: [
@@ -23,11 +23,23 @@ class Cards extends StatelessWidget {
                       height: 140,
                       width: 140,
                       decoration: const BoxDecoration(
-                        color: Colors.amber,
+                        color: Color.fromARGB(255, 99, 99, 98),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(5),
                           topRight: Radius.circular(5),
                         ),
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 10),
+                          Text(
+                            'FREE',
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                         
+                        ],
                       ),
                     ),
                   ],
