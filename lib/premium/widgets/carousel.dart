@@ -38,7 +38,10 @@ class Cards extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
-                         
+                          SizedBox(height: 20),
+                          Text(
+                            val['free'].toString(),
+                          )
                         ],
                       ),
                     ),
