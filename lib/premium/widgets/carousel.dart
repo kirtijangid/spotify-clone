@@ -41,7 +41,13 @@ class Cards extends StatelessWidget {
                           SizedBox(height: 20),
                           Text(
                             val['free'].toString(),
-                          )
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 22
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
                         ],
                       ),
                     ),
