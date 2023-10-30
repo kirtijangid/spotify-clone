@@ -30,6 +30,9 @@ class BottomBar extends StatelessWidget {
             else if (val == 2) {
               Navigator.popAndPushNamed(context, '/library');
             }
+             else if (val == 3) {
+              Navigator.popAndPushNamed(context, '/premium');
+            }
           },
           selectedItemColor: Colors.amber,
           unselectedItemColor: Colors.white,

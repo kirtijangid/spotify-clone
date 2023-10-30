@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:spotify_clone/home/homepage.dart';
 import 'package:spotify_clone/library/library.dart';
+import 'package:spotify_clone/premium/premium.dart';
 import 'package:spotify_clone/search/search.dart';
 
 void main() {
@@ -15,7 +16,7 @@ void main() {
       '/': (context) => const HomePage(),
       '/search': (context) => const Search(),
       '/library' : (context) => const Library(),
-      //   '/premium' : (context) => Premium(),
+      '/premium' : (context) => const Premium(),
     },
   ));
 }
