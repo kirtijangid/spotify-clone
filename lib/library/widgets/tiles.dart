@@ -10,18 +10,20 @@ class TilesLibrary extends StatelessWidget {
   Widget build(BuildContext context) {
     return GFListTile(
       avatar: GFAvatar(
-        radius: 30,
-        backgroundColor: Colors.grey,
+        radius: 28,
+        backgroundColor: const Color.fromARGB(255, 59, 59, 59),
         shape: shape,
         child: const Icon(
           Icons.add,
-          size: 40,
+          size: 35,
           color: Colors.white54,
         ),
       ),
       title: Text(
         title,
-        style: TextStyle(color: Colors.white, fontSize: 18),
+        style: const TextStyle(
+          color: Colors.white,
+         fontSize: 16),
       ),
     );
   }
