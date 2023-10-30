@@ -42,15 +42,28 @@ class Cards extends StatelessWidget {
                           Text(
                             val['free'].toString(),
                             style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 22
-                            ),
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 22),
                             textAlign: TextAlign.center,
                           ),
                         ],
                       ),
                     ),
+                    Container(
+                      height: 140,
+                      width: 140,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Color.fromARGB(255, 75, 74, 74),
+                            Color.fromARGB(255, 16, 80, 18),
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
               );
