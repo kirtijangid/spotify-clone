@@ -154,4 +154,19 @@ class Data {
       'shape': GFAvatarShape.circle,
     },
   ];
+
+    var carousel = [
+    {
+      'free': 'Ad breaks',
+      'premium': 'Ad-free music',
+    },
+    {
+      'free': 'Streaming only',
+      'premium': 'Download songs',
+    },
+    {
+      'free': 'Listen alone',
+      'premium': 'Group session',
+    },
+  ];
 }
