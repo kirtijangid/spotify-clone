@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spotify_clone/premium/widgets/buttons.dart';
 
 class PremiumPlan extends StatelessWidget {
   const PremiumPlan({super.key});
@@ -43,6 +44,19 @@ class PremiumPlan extends StatelessWidget {
             ],
           ),
           SizedBox(height: 30,),
+          Text(
+                '3 months FREE with 6 months \nof Premium ',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 10,),
+              Buttons(
+                text: 'VIEW PLANS',
+              ),
+            SizedBox(height: 10),
         ],
       ),
     );
