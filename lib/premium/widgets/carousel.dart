@@ -14,47 +14,46 @@ class Cards extends StatelessWidget {
           SizedBox(
             width: MediaQuery.of(context).size.width / (5.7),
           ),
-          ...Data().carousel.map(
-            (val) {
-              return Container(
-                child: Row(
-                  children: [
-                    Container(
-                      height: 140,
-                      width: 140,
-                      decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 99, 99, 98),
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(5),
-                          topRight: Radius.circular(5),
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          SizedBox(height: 10),
-                          Text(
-                            'FREE',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                          SizedBox(height: 20),
-                          Text(
-                            val['free'].toString(),
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 22),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+          ...Data().carousel.map((val) {
+            return Container(
+              child: Row(
+                children: [
+                  Container(
+                    height: 140,
+                    width: 140,
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(255, 99, 99, 98),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        topRight: Radius.circular(5),
                       ),
                     ),
-                    Container(
-                      height: 140,
-                      width: 140,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 10),
+                        Text(
+                          'FREE',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          val['free'].toString(),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 22),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 140,
+                    width: 140,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
@@ -62,20 +61,42 @@ class Cards extends StatelessWidget {
                             Color.fromARGB(255, 2, 88, 67),
                             Color.fromARGB(95, 3, 155, 109)
                           ],
-                          stops:[ 0.2,0.5,1 ]
-                        ),
-                        color: Colors.green,
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(5),
+                          stops: [
+                            0.2,
+                            0.5,
+                            1
+                          ]),
+                      color: Colors.green,
+                      borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(5),
                         bottomRight: Radius.circular(5),
-                        ),
                       ),
-                    )
-                  ],
-                ),
-              );
-            },
-          ),
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 10),
+                        Text(
+                          'Premium',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          val['premium'].toString(),
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 22),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            );
+          }),
         ],
       ),
     );
