@@ -28,7 +28,14 @@ Premium for ₹549''',
             Cards(),
             Buttons(text: 'Get Premium'),
             SizedBox(height: 10),
-            Text(' ')
+            Text(' Terms & Conditions apply. Open only to users who aren\'t subscribed to sa recurring Premium plan at a promotional price . Offers ends 10/11,2023.',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 16,
+            ),
+            textAlign: TextAlign.center,
+            ),
+
 
         ],
         ),
