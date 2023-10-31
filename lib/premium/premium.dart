@@ -3,6 +3,7 @@ import 'package:spotify_clone/bottomNavigation.dart';
 import 'package:spotify_clone/premium/widgets/buttons.dart';
 import 'package:spotify_clone/premium/widgets/carousel.dart';
 import 'package:spotify_clone/premium/widgets/currentPlan.dart';
+import 'package:spotify_clone/premium/widgets/premiumPlan.dart';
 
 class Premium extends StatelessWidget {
   const Premium({super.key});
@@ -41,6 +42,7 @@ Premium for ₹549''',
               textAlign: TextAlign.center,
             ),
             CurrentPlans(),
+            PremiumPlan(),
           ],
         ),
         bottomNavigationBar: BottomBar(3),
