@@ -11,7 +11,7 @@ class PremiumPlan extends StatelessWidget {
       height: MediaQuery.of(context).size.width * 0.5,
       padding: EdgeInsets.only(left: 10, right: 10),
       decoration:  BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                             colors: [
@@ -27,7 +27,7 @@ class PremiumPlan extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -54,7 +54,7 @@ class PremiumPlan extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Text(
+                  Text(
                             'FOR 9 MONTHS',
                             style: TextStyle(
                               color: Color.fromARGB(255, 187, 186, 186),
@@ -65,13 +65,14 @@ class PremiumPlan extends StatelessWidget {
             ],
           ),
           SizedBox(height: 30,),
-          Text(
-                '3 months FREE with 6 months \nof Premium ',
+          const Text(
+                '3 months FREE with 6 months of Premium\n - Add free music',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
+                textAlign: TextAlign.center,
               ),
               SizedBox(height: 10,),
               Buttons(
