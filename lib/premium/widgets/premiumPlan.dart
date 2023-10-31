@@ -8,8 +8,8 @@ class PremiumPlan extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(left: 10, right: 10),
-      height: MediaQuery.of(context).size.width * 0.5,
-      padding: EdgeInsets.only(left: 10, right: 10),
+      height: MediaQuery.of(context).size.width * 0.7,
+      padding: EdgeInsets.only(left: 10, right: 10, top: 10),
       decoration:  BoxDecoration(
                         gradient: const LinearGradient(
                             begin: Alignment.topLeft,
@@ -64,21 +64,27 @@ class PremiumPlan extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 30,),
+         // SizedBox(height: 2,),
           const Text(
-                '3 months FREE with 6 months of Premium\n - Add free music',
+                'As-free music listening.\nDebit and credit cards accepted.\nDownload to listen ofline.',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w400,
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 10,),
+              //SizedBox(height: 10,),
               Buttons(
                 text: 'VIEW PLANS',
               ),
-            SizedBox(height: 10),
+            //SizedBox(height: 10),
+            const Text('Offer only for users who are new to Premium.\nTerms & Conditions apply.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white60
+            ),),
+             
         ],
       ),
     );
