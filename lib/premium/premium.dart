@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/bottomNavigation.dart';
+import 'package:spotify_clone/premium/widgets/buttons.dart';
 import 'package:spotify_clone/premium/widgets/carousel.dart';
 
 class Premium extends StatelessWidget {
@@ -12,7 +13,9 @@ class Premium extends StatelessWidget {
         backgroundColor: const Color.fromARGB(137, 24, 24, 24),
         body: ListView(
           children:   [
-            Padding(padding: EdgeInsets.only(top: 50, )),
+            const Padding(
+              padding: EdgeInsets.only(top: 50, ),
+              ),
             const Text('''Get 9 months of 
 Premium for ₹549''',
             textAlign: TextAlign.center,
@@ -23,9 +26,9 @@ Premium for ₹549''',
             ),
             ),
             Cards(),
-            //Button('Get Premium'),
-            SizedBox(height: 10,),
-            Text('data')
+            Buttons(text: 'Get Premium'),
+            SizedBox(height: 10),
+            Text(' ')
 
         ],
         ),

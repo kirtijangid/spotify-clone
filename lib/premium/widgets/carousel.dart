@@ -32,7 +32,7 @@ class Cards extends StatelessWidget {
                       child: Column(
                         children: [
                           SizedBox(height: 10),
-                          Text(
+                          const Text(
                             'FREE',
                             style: TextStyle(
                               color: Colors.white,
@@ -41,7 +41,7 @@ class Cards extends StatelessWidget {
                           SizedBox(height: 20),
                           Text(
                             val['free'].toString(),
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 22),
@@ -53,7 +53,7 @@ class Cards extends StatelessWidget {
                     Container(
                       height: 140,
                       width: 140,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         gradient: LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
@@ -76,7 +76,7 @@ class Cards extends StatelessWidget {
                       child: Column(
                         children: [
                           SizedBox(height: 10),
-                          Text(
+                          const Text(
                             'PREMIUM',
                             style: TextStyle(
                               color: Colors.white,
@@ -85,7 +85,7 @@ class Cards extends StatelessWidget {
                           SizedBox(height: 20),
                           Text(
                             val['premium'].toString(),
-                            style: TextStyle(
+                            style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 22),
@@ -94,7 +94,7 @@ class Cards extends StatelessWidget {
                         ],
                       ),
                     ),
-                    const SizedBox(width: 15,),
+                    const SizedBox(width: 15),
                   ],
                 ),
               );
