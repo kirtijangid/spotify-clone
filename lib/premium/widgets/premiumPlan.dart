@@ -10,6 +10,8 @@ class PremiumPlan extends StatelessWidget {
       child: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 'Premium Individual',
@@ -20,6 +22,7 @@ class PremiumPlan extends StatelessWidget {
                 ),
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Row(
                     children: [
