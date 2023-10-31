@@ -58,9 +58,16 @@ class Cards extends StatelessWidget {
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
-                            Color.fromARGB(255, 75, 74, 74),
-                            Color.fromARGB(255, 16, 80, 18),
+                            Color.fromARGB(255, 2, 61, 50),
+                            Color.fromARGB(255, 2, 88, 67),
+                            Color.fromARGB(95, 3, 155, 109)
                           ],
+                          stops:[ 0.2,0.5,1 ]
+                        ),
+                        color: Colors.green,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(5),
+                        bottomRight: Radius.circular(5),
                         ),
                       ),
                     )
