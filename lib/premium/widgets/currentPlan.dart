@@ -6,6 +6,14 @@ class CurrentPlans extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: 20,
+        vertical: 25,
+      ),
+      height: 80,
+      decoration: BoxDecoration(color: const Color.fromARGB(255, 77, 76, 75),
+      borderRadius: BorderRadius.circular(8),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
