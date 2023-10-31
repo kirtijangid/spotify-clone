@@ -34,7 +34,7 @@ Premium for ₹549''',
             Buttons(text: 'GET PREMIUM'),
             SizedBox(height: 10),
             Text(
-              ' Terms & Conditions apply. Open only to users who aren\'t subscribed to a recurring Premium plan at a promotional price . Offers ends 10/11,2023.',
+              ' Terms & Conditions apply. Open only to users who aren\'t subscribed to a recurring Premium plan at a promotional price . Offers ends 10/11/2023.',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,

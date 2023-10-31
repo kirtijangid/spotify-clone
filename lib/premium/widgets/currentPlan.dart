@@ -12,7 +12,7 @@ class CurrentPlans extends StatelessWidget {
           horizontal: 20,
           vertical: 25,
         ),
-        height: 80,
+        height: 70,
         decoration: BoxDecoration(
           color: const Color.fromARGB(255, 77, 76, 75),
           borderRadius: BorderRadius.circular(8),
