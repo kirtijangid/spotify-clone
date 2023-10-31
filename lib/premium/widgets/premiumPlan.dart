@@ -7,7 +7,30 @@ class PremiumPlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: MediaQuery.of(context).size.width * 0.5,
+      padding: EdgeInsets.only(left: 10, right: 10),
+      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              Color.fromARGB(255, 2, 61, 50),
+                              Color.fromARGB(255, 2, 88, 67),
+                              Color.fromARGB(95, 3, 155, 109)
+                            ],
+                            stops: [
+                              0.2,
+                              0.5,
+                              1
+                            ]),
+                        color: Colors.green,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(5),
+                          bottomRight: Radius.circular(5),
+                        ),
+                      ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
