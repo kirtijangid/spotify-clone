@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:spotify_clone/premium/widgets/buttons.dart';
 
 class PremiumPlan extends StatelessWidget {
-  const PremiumPlan({super.key});
+   PremiumPlan({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(left: 10, right: 10),
       height: MediaQuery.of(context).size.width * 0.5,
       padding: EdgeInsets.only(left: 10, right: 10),
-      decoration: const BoxDecoration(
+      decoration:  BoxDecoration(
                         gradient: LinearGradient(
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
@@ -18,16 +19,10 @@ class PremiumPlan extends StatelessWidget {
                               Color.fromARGB(255, 2, 88, 67),
                               Color.fromARGB(95, 3, 155, 109)
                             ],
-                            stops: [
-                              0.2,
-                              0.5,
-                              1
-                            ]),
-                        color: Colors.green,
-                        borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(5),
-                          bottomRight: Radius.circular(5),
-                        ),
+                            
+                            ),
+                        //color: Colors.green,
+                        borderRadius:BorderRadius.circular(10),
                       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
