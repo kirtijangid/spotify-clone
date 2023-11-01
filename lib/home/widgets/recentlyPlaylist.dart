@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:spotify_clone/data%20.dart';
+import 'package:spotify_clone/utils/audio.dart';
 
 class RecentlyPlayed extends StatelessWidget {
   const RecentlyPlayed({super.key});
@@ -20,7 +21,6 @@ class RecentlyPlayed extends StatelessWidget {
           ),
         ),
       ),
-     
       Container(
         height: 200,
         child: ListView.builder(
@@ -35,32 +35,53 @@ class RecentlyPlayed extends StatelessWidget {
                       as CrossAxisAlignment,
                   children: [
                     InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return AudioPlayerPro(
+                              audioURL: Data()
+                                  .recentlyPlayed[index]['audio']
+                                  .toString(),
+                              image: Data()
+                                  .recentlyPlayed[index]['image']
+                                  .toString(),
+                              name: Data()
+                                  .recentlyPlayed[index]['name']
+                                  .toString(),
+                            );
+                          }),
+                        );
+                      },
                       child: Container(
                         child: GFAvatar(
                           shape: Data().recentlyPlayed[index]['shape']
                               as GFAvatarShape,
                           backgroundImage: AssetImage(
-                              Data().recentlyPlayed[index]['image'].toString(),
-                              ),
-                              radius: 70,
+                            Data().recentlyPlayed[index]['image'].toString(),
+                          ),
+                          radius: 70,
                         ),
                       ),
                     ),
-                    const SizedBox(height: 10,),
-                    Align(alignment: Alignment.center,
-                    child: Text(
-                      Data().recentlyPlayed[index]['name'].toString(),
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      softWrap: true,
-                      overflow: TextOverflow.fade,
+                    const SizedBox(
+                      height: 10,
                     ),
-                ),
-                ],
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        Data().recentlyPlayed[index]['name'].toString(),
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        softWrap: true,
+                        overflow: TextOverflow.fade,
+                      ),
+                    ),
+                  ],
                 ),
               );
             }),
