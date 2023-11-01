@@ -91,25 +91,35 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                         Text(
-                        widget.name,
-                        style: const TextStyle(
-                            wordSpacing: 0.2,
-                            fontSize: 25,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'ProximaNova'),
-                      ),
-                       const Text(
-                        'Classics',
-                        style: TextStyle(
-                            letterSpacing: 0.1,
-                            fontSize: 18,
-                            color: Color.fromARGB(255, 185, 183, 183),
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'ProximaNovaThin'),
-                      ),
+                        Text(
+                          widget.name,
+                          style: const TextStyle(
+                              wordSpacing: 0.2,
+                              fontSize: 25,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'ProximaNova'),
+                        ),
+                        const Text(
+                          'Classics',
+                          style: TextStyle(
+                              letterSpacing: 0.1,
+                              fontSize: 18,
+                              color: Color.fromARGB(255, 185, 183, 183),
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'ProximaNovaThin'),
+                        ),
                       ],
+                    ),
+                    IconButton(
+                      onPressed: (){
+                        
+                      },
+                      icon: Icon(
+                        LineIcons.heart,
+                        color: Colors.white,
+                        size: 25,
+                      ),
                     )
                   ],
                 ),
