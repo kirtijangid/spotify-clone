@@ -17,10 +17,19 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Color.fromARGB(136, 53, 52, 52),
+      backgroundColor: const Color.fromARGB(136, 53, 52, 52),
       body: Container(
-        padding: EdgeInsets.only(left: 10, right: 10, top: 40),
-      child: Center(
+        padding: const EdgeInsets.only(left: 10, right: 10, top: 40),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.brown,
+              Colors.black87
+            ]
+          )),
+      child: const Center(
       child: Column(
         children: [
           Row(
