@@ -34,6 +34,8 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                 colors: [Colors.brown, Colors.black87])),
         child: const Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -42,6 +44,11 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                     LineIcons.angleDown,
                     color: Colors.white,
                     size: 25,
+                  ),
+                  Column(
+                    children: [
+                      Text('PLAYING FROM ALBUM')
+                    ],
                   )
                 ],
               )
