@@ -132,7 +132,11 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                         inactiveTrackColor: Colors.grey[600],
                         activeTrackColor: Colors.white,
                         thumbColor: Colors.white,
-                        trackHeight: 3),
+                        trackHeight: 3,
+                        thumbShape: RoundSliderThumbShape(
+                          enabledThumbRadius: 5
+                        )
+                        ),
                         child: Slider(
                           value: 0,
                           onChanged: (value) => {},
