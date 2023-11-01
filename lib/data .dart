@@ -3,10 +3,26 @@ import 'package:getwidget/shape/gf_avatar_shape.dart';
 
 class Data {
   var playList = [
-    {'name': 'Liked Songs', 'image': 'assets/images/liked.jpg', 'audio': ' '},
-    {'name': '...', 'image': '...', 'audio': ' '},
-    {'name': '...', 'image': '...', 'audio': ' '},
-    {'name': '...', 'image': '...', 'audio': ' '},
+    {'name': 'Liked Songs',
+     'image': 'assets/images/liked.jpg',
+    'audio': 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'},
+    {
+      'name': 'This is Eric',
+      'image': 'assets/images/ericclapton.png',
+      'audio': 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
+    },
+    {
+      'name': 'Bealtes',
+      'image': 'assets/images/beatles.png',
+      'audio': 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
+    },
+    {
+      'name': 'Gentle Guitar',
+      'image': 'assets/images/gentleguitar.png',
+      'audio': 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
+    },
+
+   
   ];
 
   var recentlyPlayed = [
