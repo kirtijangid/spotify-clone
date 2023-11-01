@@ -75,7 +75,12 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                 ],
               ),
               SizedBox(height: 100),
-              Container(child: Image.asset(widget.image),)
+              Container(
+                width: 320,
+                  child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.asset(widget.image),
+              )),
             ],
           ),
         ),
