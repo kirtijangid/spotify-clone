@@ -32,7 +32,7 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [Colors.brown, Colors.black87])),
-        child: const Center(
+        child:  Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,7 +47,20 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                   ),
                   Column(
                     children: [
-                      Text('PLAYING FROM ALBUM')
+                      Text('PLAYING FROM ALBUM',
+                      style: TextStyle(
+                        letterSpacing: 1,
+                        fontSize: 12,
+                        color: Colors.white
+                      ),
+                      ),
+                      Text(widget.name,
+                      style: TextStyle(
+                        letterSpacing: 1,
+                        fontSize: 12,
+                        color: Colors.white
+                      ),
+                      ),
                     ],
                   )
                 ],
