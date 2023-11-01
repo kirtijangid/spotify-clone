@@ -84,7 +84,7 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
               ),
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.only(left: 25, right: 25, top: 10),
+                padding: EdgeInsets.only(left: 25, right: 25, top: 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -128,24 +128,47 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                     width: double.infinity,
                     child: SliderTheme(
                       data: SliderTheme.of(context).copyWith(
-                        activeTickMarkColor: Colors.white,
-                        inactiveTrackColor: Colors.grey[600],
-                        activeTrackColor: Colors.white,
-                        thumbColor: Colors.white,
-                        trackHeight: 3,
-                        thumbShape: RoundSliderThumbShape(
-                          enabledThumbRadius: 5
-                        )
-                        ),
-                        child: Slider(
-                          value: 0,
-                          onChanged: (value) => {},
-                        ),
+                          activeTickMarkColor: Colors.white,
+                          inactiveTrackColor: Colors.grey[600],
+                          activeTrackColor: Colors.white,
+                          thumbColor: Colors.white,
+                          trackHeight: 3,
+                          thumbShape:
+                              RoundSliderThumbShape(enabledThumbRadius: 5)),
+                      child: Slider(
+                        value: 0,
+                        onChanged: (value) => {},
                       ),
                     ),
-                  
+                  ),
                 ],
-              )
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 25, right: 25),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '0.00',
+                      style: TextStyle(
+                          letterSpacing: 0.1,
+                          fontSize: 14,
+                          color: Color.fromARGB(255, 185, 183, 183),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'ProximaNovaThin'),
+                    ),
+                    Text(
+                      '0.00',
+                      style: TextStyle(
+                          letterSpacing: 0.1,
+                          fontSize: 14,
+                          color: Color.fromARGB(255, 185, 183, 183),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'ProximaNovaThin'),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
