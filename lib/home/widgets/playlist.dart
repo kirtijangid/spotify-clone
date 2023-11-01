@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/data%20.dart';
+import 'package:spotify_clone/utils/audio.dart';
 
 class PlayLists extends StatelessWidget {
   const PlayLists({super.key});
@@ -12,6 +13,21 @@ class PlayLists extends StatelessWidget {
             crossAxisCount: 2, childAspectRatio: 2.5),
         children: Data().playList.map((val) {
           return InkWell(
+            onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return AudioPlayerPro(
+                              audioURL: val['audio']
+                                  .toString(),
+                              image: val['image']
+                                  .toString(),
+                              name: val['name']
+                                  .toString(),
+                            );
+                          }),
+                        );
+                      },
             child: Card(
               color: const Color.fromARGB(255, 85, 84, 84),
               child: IntrinsicHeight(

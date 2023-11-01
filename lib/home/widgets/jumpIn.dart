@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/components/avatar/gf_avatar.dart';
 import 'package:getwidget/shape/gf_avatar_shape.dart';
 import 'package:spotify_clone/data%20.dart';
+import 'package:spotify_clone/utils/audio.dart';
 
 
 class JumpIn extends StatelessWidget {
@@ -39,6 +40,24 @@ class JumpIn extends StatelessWidget {
                       as CrossAxisAlignment,
                   children: [
                     InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return AudioPlayerPro(
+                              audioURL: Data()
+                                  .jumpIn[index]['audio']
+                                  .toString(),
+                              image: Data()
+                                  .jumpIn[index]['image']
+                                  .toString(),
+                              name: Data()
+                                  .jumpIn[index]['name']
+                                  .toString(),
+                            );
+                          }),
+                        );
+                      },
                       child: Container(
                         child: GFAvatar(
                           shape: Data().jumpIn[index]['shape']
