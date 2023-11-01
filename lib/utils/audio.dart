@@ -113,16 +113,27 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                     ),
                     IconButton(
                       onPressed: (){
-                        
+
                       },
                       icon: Icon(
                         LineIcons.heart,
                         color: Colors.white,
                         size: 25,
                       ),
-                    )
+                    ),
                   ],
                 ),
+              ),
+              Stack(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    child: Slider(
+                      value: 0,
+                      onChanged: (value) => {},
+                    ),
+                  ),
+                ],
               )
             ],
           ),
