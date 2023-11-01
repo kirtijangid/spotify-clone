@@ -28,11 +28,13 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
       body: Container(
         padding: const EdgeInsets.only(left: 10, right: 10, top: 40),
         decoration: const BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Colors.brown, Colors.black87])),
-        child:  Center(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Colors.brown, Color.fromARGB(221, 20, 20, 20)],
+          ),
+        ),
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,21 +49,21 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                   ),
                   Column(
                     children: [
-                      Text('PLAYING FROM ALBUM',
-                      style: TextStyle(
-                        letterSpacing: 1,
-                        fontSize: 12,
-                        color: Colors.white
+                      Text(
+                        'PLAYING FROM ALBUM',
+                        style: TextStyle(
+                            letterSpacing: 1,
+                            fontSize: 14,
+                            color: Colors.white),
                       ),
-                      ),
-                      Text(widget.name,
-                      style: TextStyle(
-                        letterSpacing: 1,
-                        fontSize: 13,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'Librefranklin'
-                      ),
+                      Text(
+                        widget.name,
+                        style: TextStyle(
+                            letterSpacing: 1,
+                            fontSize: 15,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Librefranklin'),
                       ),
                     ],
                   ),
@@ -71,7 +73,9 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                     size: 25,
                   ),
                 ],
-              )
+              ),
+              SizedBox(height: 100),
+              Container(child: Image.asset(widget.image),)
             ],
           ),
         ),
