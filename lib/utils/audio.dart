@@ -42,14 +42,14 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
+                  const Icon(
                     LineIcons.angleDown,
                     color: Colors.white,
                     size: 25,
                   ),
                   Column(
                     children: [
-                      Text(
+                      const Text(
                         'PLAYING FROM ALBUM',
                         style: TextStyle(
                             letterSpacing: 1,
@@ -58,7 +58,7 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       ),
                       Text(
                         widget.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                             letterSpacing: 1,
                             fontSize: 15,
                             color: Colors.white,
@@ -67,7 +67,7 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       ),
                     ],
                   ),
-                  Icon(
+                  const Icon(
                     LineIcons.verticalEllipsis,
                     color: Colors.white,
                     size: 25,
@@ -76,11 +76,44 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
               ),
               SizedBox(height: 100),
               Container(
-                width: 320,
-                  child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.asset(widget.image),
-              )),
+                width: 325,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(widget.image),
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.only(left: 25, right: 25, top: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                         Text(
+                        widget.name,
+                        style: const TextStyle(
+                            wordSpacing: 0.2,
+                            fontSize: 25,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'ProximaNova'),
+                      ),
+                       const Text(
+                        'Classics',
+                        style: TextStyle(
+                            letterSpacing: 0.1,
+                            fontSize: 18,
+                            color: Color.fromARGB(255, 185, 183, 183),
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'ProximaNovaThin'),
+                      ),
+                      ],
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
