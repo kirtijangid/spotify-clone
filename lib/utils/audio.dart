@@ -112,9 +112,7 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       ],
                     ),
                     IconButton(
-                      onPressed: (){
-
-                      },
+                      onPressed: () {},
                       icon: Icon(
                         LineIcons.heart,
                         color: Colors.white,
@@ -128,11 +126,20 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                 children: [
                   Container(
                     width: double.infinity,
-                    child: Slider(
-                      value: 0,
-                      onChanged: (value) => {},
+                    child: SliderTheme(
+                      data: SliderTheme.of(context).copyWith(
+                        activeTickMarkColor: Colors.white,
+                        inactiveTrackColor: Colors.grey[600],
+                        activeTrackColor: Colors.white,
+                        thumbColor: Colors.white,
+                        trackHeight: 3),
+                        child: Slider(
+                          value: 0,
+                          onChanged: (value) => {},
+                        ),
+                      ),
                     ),
-                  ),
+                  
                 ],
               )
             ],
