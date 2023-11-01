@@ -57,12 +57,19 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       Text(widget.name,
                       style: TextStyle(
                         letterSpacing: 1,
-                        fontSize: 12,
-                        color: Colors.white
+                        fontSize: 13,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Librefranklin'
                       ),
                       ),
                     ],
-                  )
+                  ),
+                  Icon(
+                    LineIcons.verticalEllipsis,
+                    color: Colors.white,
+                    size: 25,
+                  ),
                 ],
               )
             ],
