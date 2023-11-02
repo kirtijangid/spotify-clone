@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -20,7 +22,7 @@ class AudioPlayerPro extends StatefulWidget {
 class _AudioPlayerProState extends State<AudioPlayerPro> {
   Notify notify = Get.find();
   Duration _duration = new Duration();
-  Duration _position =  new Duration();
+  Duration _position = new Duration();
 
   static AudioPlayer advancedPlayer = AudioPlayer();
 
@@ -151,11 +153,22 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       ],
                     ),
                     IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        LineIcons.heart,
-                        color: Colors.white,
-                        size: 25,
+                      onPressed: () {
+                        notify.isHeartPressed.value =
+                            notify.isHeartPressed.value ? false : true;
+                      },
+                      icon: Obx(
+                        () => (notify.isHeartPressed.value)
+                            ? Icon(
+                                Icons.favorite,
+                                color: Colors.pink,
+                                size: 25,
+                              )
+                            : Icon(
+                                LineIcons.heart,
+                                color: Colors.white,
+                                size: 25,
+                              ),
                       ),
                     ),
                   ],
@@ -238,20 +251,20 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                             notify.isIconPlay.value =
                                 notify.isIconPlay.value ? false : true;
                           },
-                          icon: Obx(() => notify.isIconPlay.value ?
-                          Icon(
-                            Icons.pause_circle_filled,
-                            color: Colors.white,
-                          ):
-                           Icon(
-                            Icons.play_circle_filled,
-                            color: Colors.white,
+                          icon: Obx(
+                            () => notify.isIconPlay.value
+                                ? Icon(
+                                    Icons.pause_circle_filled,
+                                    color: Colors.white,
+                                  )
+                                : Icon(
+                                    Icons.play_circle_filled,
+                                    color: Colors.white,
+                                  ),
                           ),
                         ),
                       ),
-                      ),
                     ),
-                    
                     InkWell(
                       onTap: () {},
                       child: Icon(
