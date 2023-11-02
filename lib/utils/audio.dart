@@ -220,6 +220,35 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                   ],
                 ),
               ),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.only(left: 22, right: 22),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.speaker_group_outlined,
+                      color: Colors.grey,
+                    ),
+                    Spacer(flex: 5,),
+                    InkWell(
+                      onTap: () {},
+                      child: Icon(
+                        Icons.share_outlined,
+                        color: Colors.grey,
+                        size: 30,
+                      ),
+                    ),
+                    Spacer(),
+                    
+                    Icon(
+                        Icons.line_weight_sharp,
+                        color: Colors.grey,
+                        //size: 70,
+                      ),
+                  ],
+                ),
+              ),
+             
             ],
           ),
         ),
