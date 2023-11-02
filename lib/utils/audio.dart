@@ -171,6 +171,8 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
               ),
               Container(
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Icon(
                       LineIcons.random,
@@ -185,14 +187,17 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       ),
                     ),
                     Container(
+                      height: 90,
+                      width: 90,
                       child: Center(
                         child: IconButton(
+                          iconSize: 70,
                           alignment: Alignment.center,
                           onPressed: () {},
                           icon: Icon(
                             Icons.play_circle_filled,
                             color: Colors.white,
-                            size: 70,
+                            
                           ),
                         ),
                       ),
