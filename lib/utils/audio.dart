@@ -170,6 +170,8 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                 ),
               ),
               Container(
+                width: double.infinity,
+                padding: EdgeInsets.only(left: 22, right: 22),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
