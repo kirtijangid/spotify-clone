@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:spotify_clone/utils/notify.dart';
 
 class AudioPlayerPro extends StatefulWidget {
@@ -294,7 +295,9 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       flex: 5,
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Share.share('https://spotify/songid-3291931');
+                      },
                       child: Icon(
                         Icons.share_outlined,
                         color: Colors.grey,
