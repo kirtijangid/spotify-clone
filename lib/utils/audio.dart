@@ -169,6 +169,50 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                   ],
                 ),
               ),
+              Container(
+                child: Row(
+                  children: [
+                    Icon(
+                      LineIcons.random,
+                      color: Colors.grey,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Icon(
+                        Icons.skip_previous,
+                        color: Colors.white,
+                        size: 40,
+                      ),
+                    ),
+                    Container(
+                      child: Center(
+                        child: IconButton(
+                          alignment: Alignment.center,
+                          onPressed: () {},
+                          icon: Icon(
+                            Icons.play_circle_filled,
+                            color: Colors.white,
+                            size: 70,
+                          ),
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Icon(
+                        Icons.skip_next,
+                        color: Colors.white,
+                        size: 40,
+                      ),
+                    ),
+                    Icon(
+                        Icons.repeat,
+                        color: Colors.grey,
+                        //size: 70,
+                      ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
