@@ -1,6 +1,9 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:spotify_clone/utils/notify.dart';
 
 class AudioPlayerPro extends StatefulWidget {
   AudioPlayerPro(
@@ -15,6 +18,42 @@ class AudioPlayerPro extends StatefulWidget {
 }
 
 class _AudioPlayerProState extends State<AudioPlayerPro> {
+  Notify notify = Get.find();
+  Duration _duration = new Duration();
+  Duration _position =  new Duration();
+
+  static AudioPlayer advancedPlayer = AudioPlayer();
+
+  @override
+  void initState() {
+    initPlayer();
+    super.initState();
+  }
+
+  void dispose() {
+    super.dispose();
+  }
+
+  void initPlayer() {
+    advancedPlayer = AudioPlayer();
+    advancedPlayer.onDurationChanged.listen((d) {
+      setState(() {
+        _duration = d;
+      });
+    });
+
+    advancedPlayer.onPositionChanged.listen((p) {
+      setState(() {
+        _duration = p;
+      });
+    });
+  }
+
+  void seekToSecond(second) {
+    Duration newDuration = Duration(seconds: second);
+    advancedPlayer.seek(newDuration);
+  }
+
   @override
   Widget build(BuildContext context) {
     WidgetsFlutterBinding.ensureInitialized();
@@ -195,15 +234,24 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                         child: IconButton(
                           iconSize: 70,
                           alignment: Alignment.center,
-                          onPressed: () {},
-                          icon: Icon(
+                          onPressed: () {
+                            notify.isIconPlay.value =
+                                notify.isIconPlay.value ? false : true;
+                          },
+                          icon: Obx(() => notify.isIconPlay.value ?
+                          Icon(
+                            Icons.pause_circle_filled,
+                            color: Colors.white,
+                          ):
+                           Icon(
                             Icons.play_circle_filled,
                             color: Colors.white,
-                            
                           ),
                         ),
                       ),
+                      ),
                     ),
+                    
                     InkWell(
                       onTap: () {},
                       child: Icon(
@@ -213,10 +261,10 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       ),
                     ),
                     Icon(
-                        Icons.repeat,
-                        color: Colors.grey,
-                        //size: 70,
-                      ),
+                      Icons.repeat,
+                      color: Colors.grey,
+                      //size: 70,
+                    ),
                   ],
                 ),
               ),
@@ -229,7 +277,9 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       Icons.speaker_group_outlined,
                       color: Colors.grey,
                     ),
-                    Spacer(flex: 5,),
+                    Spacer(
+                      flex: 5,
+                    ),
                     InkWell(
                       onTap: () {},
                       child: Icon(
@@ -239,16 +289,14 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                       ),
                     ),
                     Spacer(),
-                    
                     Icon(
-                        Icons.line_weight_sharp,
-                        color: Colors.grey,
-                        //size: 70,
-                      ),
+                      Icons.line_weight_sharp,
+                      color: Colors.grey,
+                      //size: 70,
+                    ),
                   ],
                 ),
               ),
-             
             ],
           ),
         ),
