@@ -309,21 +309,22 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                                     //     ActionButtonType.KeepOnTop,
                                   ),
                                 ]);
-                            final myStream = AwesomeNotifications()
-                                .actionStream
-                                .asBroadcastString();
-                            myStream.listen((action) {
-                              if (action.buttonKeyPressed == 'play') {
-                                advancedPlayer.play(UrlSource(widget.audioURL));
-                                notify.setIconPlay(true);
-                              } else if (action.buttonKeyPressed == 'pause') {
-                                advancedPlayer.pause();
-                                notify.setIconPlay(false);
-                              } else if (action.buttonKeyPressed == 'stop') {
-                                advancedPlayer.stop();
-                                notify.setIconPlay(true);
-                              }
-                            });
+                            
+                            // final myStream = AwesomeNotifications()
+                            //     .actionStream
+                            //     .asBroadcastString();
+                            // myStream.listen((action) {
+                            //   if (action.buttonKeyPressed == 'play') {
+                            //     advancedPlayer.play(UrlSource(widget.audioURL));
+                            //     notify.setIconPlay(true);
+                            //   } else if (action.buttonKeyPressed == 'pause') {
+                            //     advancedPlayer.pause();
+                            //     notify.setIconPlay(false);
+                            //   } else if (action.buttonKeyPressed == 'stop') {
+                            //     advancedPlayer.stop();
+                            //     notify.setIconPlay(true);
+                            //   }
+                            // });
                           },
                           icon: Obx(
                             () => notify.isIconPlay.value

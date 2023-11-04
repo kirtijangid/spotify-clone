@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class Buttons extends StatefulWidget {
-   Buttons({super.key, required this.text});
+  Buttons({super.key, required this.text});
   final String text;
 
   @override
@@ -9,13 +10,39 @@ class Buttons extends StatefulWidget {
 }
 
 class _ButtonsState extends State<Buttons> {
+  late Razorpay _razorpay;
+
+  @override
+  void initState() {
+    _razorpay = Razorpay();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _razorpay.clear();
+    super.dispose();
+  }
+
+  void openCheckout() async {
+    try {
+      _razorpay.open({
+        'name': 'spotify premium',
+        'key': 'rzp_live_ILgsfZCZoFIKMb',
+        'amount': 100,
+      });
+    } catch (e) {
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(left: 80, right: 80),
       height: 50,
       child: TextButton(
-        onPressed: () {}, 
+        onPressed: openCheckout,
         style: TextButton.styleFrom(
           backgroundColor: Colors.white,
           shape: RoundedRectangleBorder(
