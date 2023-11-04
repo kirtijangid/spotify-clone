@@ -1,6 +1,5 @@
-import 'dart:ffi';
-
 import 'package:audioplayers/audioplayers.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -22,8 +21,9 @@ class AudioPlayerPro extends StatefulWidget {
 
 class _AudioPlayerProState extends State<AudioPlayerPro> {
   Notify notify = Get.find();
-  Duration _duration = new Duration();
-  Duration _position = new Duration();
+  bool isPlayPressed = false;
+  Duration _duration = Duration();
+  Duration _position = Duration();
 
   static AudioPlayer advancedPlayer = AudioPlayer();
 
@@ -55,6 +55,12 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
   void seekToSecond(second) {
     Duration newDuration = Duration(seconds: second);
     advancedPlayer.seek(newDuration);
+  }
+
+  double setChanged() {
+    Duration newDuration = Duration(seconds: 0);
+    advancedPlayer.seek(newDuration);
+    return 0.0;
   }
 
   @override
@@ -189,8 +195,18 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                           thumbShape:
                               RoundSliderThumbShape(enabledThumbRadius: 5)),
                       child: Slider(
-                        value: 0,
-                        onChanged: (value) => {},
+                        value: (_position.inSeconds.toDouble() !=
+                                _duration.inSeconds.toDouble())
+                            ? _position.inSeconds.toDouble()
+                            : setChanged(),
+                        min: 0,
+                        max: _duration.inSeconds.toDouble(),
+                        onChanged: (double value) => {
+                          setState(() {
+                            seekToSecond(value.toInt());
+                            value = value;
+                          }),
+                        },
                       ),
                     ),
                   ),
@@ -202,7 +218,7 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '0.00',
+                      "${_position.inMinutes.toInt()}:${(_position.inSeconds % 60).toString().padLeft(2, "0")}",
                       style: TextStyle(
                           letterSpacing: 0.1,
                           fontSize: 14,
@@ -211,7 +227,7 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                           fontFamily: 'ProximaNovaThin'),
                     ),
                     Text(
-                      '0.00',
+                      "${_duration.inMinutes.toInt()}:${(_duration.inSeconds % 60).toString().padLeft(2, "0")}",
                       style: TextStyle(
                           letterSpacing: 0.1,
                           fontSize: 14,
@@ -251,6 +267,63 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
                           onPressed: () {
                             notify.isIconPlay.value =
                                 notify.isIconPlay.value ? false : true;
+
+                            if (notify.isIconPlay.value) {
+                              advancedPlayer.play(
+                                UrlSource(widget.audioURL),
+                              );
+                            } else {
+                              advancedPlayer.pause();
+                            }
+                            AwesomeNotifications().createNotification(
+                                content: NotificationContent(
+                                  id: 123,
+                                  channelKey: 'basic',
+                                  title: 'Now Playing - ${widget.name}',
+                                  autoDismissible: false,
+                                  displayOnBackground: true,
+                                ),
+                                actionButtons: [
+                                  NotificationActionButton(
+                                    key: 'play',
+                                    label: 'play',
+                                    autoDismissible: false,
+                                    showInCompactView: true,
+                                    // buttonType:
+                                    //     ActionButtonType.KeepOnTop,
+                                  ),
+                                  NotificationActionButton(
+                                    key: 'pause',
+                                    label: 'pause',
+                                    autoDismissible: false,
+                                    showInCompactView: true,
+                                    // buttonType:
+                                    //     ActionButtonType.KeepOnTop,
+                                  ),
+                                  NotificationActionButton(
+                                    key: 'stop',
+                                    label: 'stop',
+                                    autoDismissible: false,
+                                    showInCompactView: true,
+                                    // buttonType:
+                                    //     ActionButtonType.KeepOnTop,
+                                  ),
+                                ]);
+                            final myStream = AwesomeNotifications()
+                                .actionStream
+                                .asBroadcastString();
+                            myStream.listen((action) {
+                              if (action.buttonKeyPressed == 'play') {
+                                advancedPlayer.play(UrlSource(widget.audioURL));
+                                notify.setIconPlay(true);
+                              } else if (action.buttonKeyPressed == 'pause') {
+                                advancedPlayer.pause();
+                                notify.setIconPlay(false);
+                              } else if (action.buttonKeyPressed == 'stop') {
+                                advancedPlayer.stop();
+                                notify.setIconPlay(true);
+                              }
+                            });
                           },
                           icon: Obx(
                             () => notify.isIconPlay.value

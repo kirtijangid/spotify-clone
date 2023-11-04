@@ -1,5 +1,6 @@
 //import 'dart:js';
 
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -15,23 +16,44 @@ void main() {
     [DeviceOrientation.portraitUp],
   );
 
+  AwesomeNotifications().initialize(null, [
+    NotificationChannel(
+        channelKey: 'basic',
+        channelName: 'basic notification',
+        channelDescription: 'notifications for playing/pausing audio',
+        importance: NotificationImportance.High,
+        channelShowBadge: true,
+        
+        ),
+  ]);
+
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   Notify notify = Get.put(Notify());
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
-        '/search': (context) => const Search(),
-        '/library': (context) => const Library(),
-        '/premium': (context) => const Premium(),
+        '/': (context) => HomePage(),
+        '/search': (context) => Search(),
+        '/library': (context) => Library(),
+        '/premium': (context) => Premium(),
       },
     );
   }
