@@ -40,24 +40,24 @@ class JumpIn extends StatelessWidget {
                       as CrossAxisAlignment,
                   children: [
                     InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) {
-                            return AudioPlayerPro(
-                              audioURL: Data()
-                                  .jumpIn[index]['audio']
-                                  .toString(),
-                              image: Data()
-                                  .jumpIn[index]['image']
-                                  .toString(),
-                              name: Data()
-                                  .jumpIn[index]['name']
-                                  .toString(),
-                            );
-                          }),
-                        );
-                      },
+                      // onTap: () {
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(builder: (context) {
+                      //       return AudioPlayerPro(
+                      //         audioURL: Data()
+                      //             .jumpIn[index]['audio']
+                      //             .toString(),
+                      //         image: Data()
+                      //             .jumpIn[index]['image']
+                      //             .toString(),
+                      //         name: Data()
+                      //             .jumpIn[index]['name']
+                      //             .toString(),
+                      //       );
+                      //     }),
+                      //   );
+                      // },
                       child: Container(
                         child: GFAvatar(
                           shape: Data().jumpIn[index]['shape']

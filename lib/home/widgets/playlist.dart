@@ -13,21 +13,18 @@ class PlayLists extends StatelessWidget {
             crossAxisCount: 2, childAspectRatio: 2.5),
         children: Data().playList.map((val) {
           return InkWell(
-            onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) {
-                            return AudioPlayerPro(
-                              audioURL: val['audio']
-                                  .toString(),
-                              image: val['image']
-                                  .toString(),
-                              name: val['name']
-                                  .toString(),
-                            );
-                          }),
-                        );
-                      },
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) {
+            //       return AudioPlayerPro(
+            //         audioURL: val['audio'].toString(),
+            //         image: val['image'].toString(),
+            //         name: val['name'].toString(),
+            //       );
+            //     }),
+            //   );
+            // },
             child: Card(
               color: const Color.fromARGB(255, 85, 84, 84),
               child: IntrinsicHeight(

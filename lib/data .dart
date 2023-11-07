@@ -2,27 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/shape/gf_avatar_shape.dart';
 
 class Data {
+  static final Data _singleton = Data._internal();
+
+  factory Data() {
+    return _singleton;
+  }
+
+  Data._internal();
+
   var playList = [
-    {'name': 'Liked Songs',
-     'image': 'assets/images/liked.jpg',
-    'audio': 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'},
+    {
+      'name': 'Liked Songs',
+      'image': 'assets/images/liked.jpg',
+      'audio':
+          'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
+    },
     {
       'name': 'This is Eric',
       'image': 'assets/images/ericclapton.png',
-      'audio': 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
+      'audio':
+          'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
     },
     {
       'name': 'Bealtes',
       'image': 'assets/images/beatles.png',
-      'audio': 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
+      'audio':
+          'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
     },
     {
       'name': 'Gentle Guitar',
       'image': 'assets/images/gentleguitar.png',
-      'audio': 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
+      'audio':
+          'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
     },
-
-   
   ];
 
   var recentlyPlayed = [
@@ -124,7 +136,7 @@ class Data {
           'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/2e/e2/7d/2ee27d35-5e1e-0fd0-42ea-359b5256403e/mzaf_9335390342361255150.plus.aac.p.m4a'
     },
   ];
-   var genres = [
+  var genres = [
     'assets/images/pop.jpg',
     'assets/images/hiphop.jpg',
     'assets/images/rnb.jpg',
@@ -144,7 +156,7 @@ class Data {
     'assets/images/equal.jpg',
   ];
 
-   var library = [
+  var library = [
     {
       'name': 'Liked Songs',
       'subtitle': 'Playlist • 34 songs',
@@ -171,7 +183,7 @@ class Data {
     },
   ];
 
-    var carousel = [
+  var carousel = [
     {
       'free': 'Ad breaks',
       'premium': 'Ad-free music',

@@ -1,60 +1,41 @@
 //import 'dart:js';
 
-import 'package:awesome_notifications/awesome_notifications.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
+import 'package:spotify_clone/auth_gate.dart';
+import 'package:spotify_clone/firebase_options.dart';
 import 'package:spotify_clone/home/homepage.dart';
 import 'package:spotify_clone/library/library.dart';
 import 'package:spotify_clone/premium/premium.dart';
 import 'package:spotify_clone/search/search.dart';
-import 'package:spotify_clone/utils/notify.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations(
-    [DeviceOrientation.portraitUp],
-  );
-
-  AwesomeNotifications().initialize(null, [
-    NotificationChannel(
-        channelKey: 'basic',
-        channelName: 'basic notification',
-        channelDescription: 'notifications for playing/pausing audio',
-        importance: NotificationImportance.High,
-        channelShowBadge: true,
-        
-        ),
-  ]);
-
-  runApp(MyApp());
+void main() async {
+ WidgetsFlutterBinding.ensureInitialized();
+ await Firebase.initializeApp(
+   options: DefaultFirebaseOptions.currentPlatform,
+ );
+  runApp(MyApp(
+    
+  ));
 }
 
-class MyApp extends StatefulWidget {
-  MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  Notify notify = Get.put(Notify());
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => HomePage(),
-        '/search': (context) => Search(),
-        '/library': (context) => Library(),
-        '/premium': (context) => Premium(),
-      },
-    );
-  }
+class MyApp extends StatelessWidget {
+ const MyApp({super.key});
+ @override
+ Widget build(BuildContext context) {
+   return MaterialApp(
+     theme: ThemeData(
+       primarySwatch: Colors.blue,
+     ),
+     home: AuthGate(),
+     initialRoute: '/',
+    routes: {
+     // '/': (context) => const HomePage(),
+      '/search': (context) => const Search(),
+      '/library' : (context) => const Library(),
+      '/premium' : (context) => const Premium(),
+    },
+   );
+ }
 }
