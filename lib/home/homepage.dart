@@ -13,9 +13,25 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black87,
-        title: Title(color: Colors.white,
-         child: Text('Spotify')),
+        title:Text('Spotify',
+        style: TextStyle(
+          fontSize: 24
+        ),),
+         actions: <Widget>[
+    IconButton(
+      icon: Icon(
+        Icons.person,
+        color: Colors.white,
+        size: 27,
+        
       ),
+      onPressed: () {
+        // do something
+      },
+    )
+  ],
+         ),
+      
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
