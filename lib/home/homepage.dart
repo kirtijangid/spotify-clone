@@ -1,4 +1,6 @@
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:spotify_clone/bottomNavigation.dart';
 import 'package:spotify_clone/home/widgets/headerAction.dart';
 import 'package:spotify_clone/home/widgets/jumpIn.dart';
@@ -13,25 +15,28 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black87,
-        title:Text('Spotify',
-        style: TextStyle(
-          fontSize: 24
-        ),),
-         actions: <Widget>[
-    IconButton(
-      icon: Icon(
-        Icons.person,
-        color: Colors.white,
-        size: 27,
-        
+        title: Text(
+          'Spotify',
+          style: TextStyle(fontSize: 24),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.person,
+              color: Colors.white,
+              size: 27,
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute<ProfileScreen>(
+                  builder: (context) => const ProfileScreen(),
+                ),
+              );
+            },
+          )
+        ],
       ),
-      onPressed: () {
-        // do something
-      },
-    )
-  ],
-         ),
-      
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -61,7 +66,7 @@ class HomePage extends StatelessWidget {
             ),
             Container(
               height: 150,
-             child: PlayLists(),
+              child: PlayLists(),
             ),
             const SizedBox(
               height: 20,
