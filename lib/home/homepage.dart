@@ -11,6 +11,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black87,
+        title: Title(color: Colors.white,
+         child: Text('Spotify')),
+      ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
