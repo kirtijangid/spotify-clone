@@ -19,7 +19,9 @@ class AuthGate extends StatelessWidget {
             providers: [
               EmailAuthProvider(),
               GoogleProvider(clientId: 'YOUR_WEBCLIENT_ID'), // new
+              //PhoneAuthProvider()
             ],
+
               headerBuilder: (context, constraints, shrinkOffset) {
              return Padding(
                padding: const EdgeInsets.all(20),
@@ -37,6 +39,7 @@ class AuthGate extends StatelessWidget {
                    : const Text('Welcome to Flutterfire, please sign up!'),
              );
            },
+           
            footerBuilder: (context, action) {
              return const Padding(
                padding: EdgeInsets.only(top: 16),

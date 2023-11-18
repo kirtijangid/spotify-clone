@@ -35,13 +35,13 @@ class HomePage extends StatelessWidget {
                      actions: [
                       SignedOutAction((context) {
                         Navigator.of(context).pop();
-                      })
+                      }),
                     ],
                   ),
                 ),
               );
             },
-          )
+          ),
         ],
       ),
       body: Container(
