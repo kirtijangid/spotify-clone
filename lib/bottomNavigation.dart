@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:spotify_clone/home/homepage.dart';
 
 class BottomBar extends StatelessWidget {
@@ -63,7 +63,7 @@ class BottomBar extends StatelessWidget {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                FontAwesomeIcons.spotify,
+                Icons.library_music,
                 size: 30,
               ),
               label: 'Premium',

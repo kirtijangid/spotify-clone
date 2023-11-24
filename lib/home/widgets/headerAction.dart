@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HeaderActions extends StatelessWidget {
   const HeaderActions({super.key});
@@ -15,7 +15,8 @@ class HeaderActions extends StatelessWidget {
         size: 22,
         ),
         SizedBox(width: 20,),
-        Icon(FontAwesomeIcons.gear,
+        Icon(
+          Icons.settings,
         color: Colors.white,
         size: 20,
         )

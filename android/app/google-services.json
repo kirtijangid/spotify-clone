@@ -12,7 +12,12 @@
           "package_name": "com.example.spotify_clone"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "576116319513-hlj1loq68nler3sj6kho46gosev2sc5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBMSIdOY_YWrBsOI6w33ZrvQsNVXUpJ-ME"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "576116319513-hlj1loq68nler3sj6kho46gosev2sc5n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "576116319513-8r32ph5v1kom1hdg7qo5tn631ekigasf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.spotifyClone"
+              }
+            }
+          ]
         }
       }
     }

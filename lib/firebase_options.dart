@@ -66,6 +66,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '576116319513',
     projectId: 'spotify-clone-d7b32',
     storageBucket: 'spotify-clone-d7b32.appspot.com',
+    iosClientId: '576116319513-8r32ph5v1kom1hdg7qo5tn631ekigasf.apps.googleusercontent.com',
     iosBundleId: 'com.example.spotifyClone',
   );
 
@@ -75,6 +76,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '576116319513',
     projectId: 'spotify-clone-d7b32',
     storageBucket: 'spotify-clone-d7b32.appspot.com',
+    iosClientId: '576116319513-b9fffqir55bshp8aqb42b8lfu9m4c2k8.apps.googleusercontent.com',
     iosBundleId: 'com.example.spotifyClone.RunnerTests',
   );
 }
