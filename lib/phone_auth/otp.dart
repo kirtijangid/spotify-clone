@@ -90,9 +90,9 @@ class _OTPState extends State<OTP> {
               height: 30,
             ),
             Pinput(
-              // defaultPinTheme: defaultPinTheme,
-              // focusedPinTheme: focusedPinTheme,
-              // submittedPinTheme: submittedPinTheme,
+               defaultPinTheme: defaultPinTheme,
+               focusedPinTheme: focusedPinTheme,
+               submittedPinTheme: submittedPinTheme,
               validator: (s) {
                 return s == '2222' ? null : 'Pin is incorrect';
               },

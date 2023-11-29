@@ -23,7 +23,7 @@ class BottomBar extends StatelessWidget {
           type: BottomNavigationBarType.fixed,
           onTap: (val) {
             if (val == 0) {
-              Navigator.popAndPushNamed(context, '/');
+              Navigator.popAndPushNamed(context, 'home');
             } else if (val == 1) {
               Navigator.popAndPushNamed(context, '/search');
             }

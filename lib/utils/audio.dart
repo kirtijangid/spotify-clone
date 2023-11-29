@@ -32,7 +32,8 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
     initPlayer();
     super.initState();
   }
-
+  
+  @override
   void dispose() {
     super.dispose();
   }
@@ -47,7 +48,7 @@ class _AudioPlayerProState extends State<AudioPlayerPro> {
 
     advancedPlayer.onPositionChanged.listen((p) {
       setState(() {
-        _duration = p;
+        _position = p;
       });
     });
   }
